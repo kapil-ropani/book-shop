@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  mongo:
+    image: mongo
+    volumes:
+      - ./mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
